@@ -32,9 +32,9 @@
                 <label for="Fecha">Fecha solicitada:</label>
                 <input type="date" name="Fecha" id="Fecha" required>
                 <label for="Localidad">Localidad:</label>
-                <input type="text" name="Localidad" placeholder="Localidad" id="Localidad">
+                <input type="text" name="Localidad" placeholder="Localidad" id="Localidad" required>
                 <label for="Institucion">Institución:</label>
-                <input type="text" name="Institucion" placeholder="Nombre de Institución" id="Institucion">
+                <input type="text" name="Institucion" placeholder="Nombre de Institución" id="Institucion" required>
                 <label for="Zona">Zona Sanitaria:</label>
                 <select name="Zona Sanitaria" id="Zona" required>
                     <option value="Zona-1">Zona 1</option>
@@ -44,19 +44,19 @@
                     <option value="Zona-5">Zona 5</option>
                 </select>
                 <label for="Nombres">Nombres:</label>
-                <input type="text" name="Nombres" placeholder="Nombres" id="Nombres">
+                <input type="text" name="Nombres" placeholder="Nombres" id="Nombres" required>
                 <label for="Apellido">Apellido:</label>
-                <input type="text" name="Apellido" placeholder="Apellido" id="Apellido">
+                <input type="text" name="Apellido" placeholder="Apellido" id="Apellido" required>
                 <label for="Documento">Documento:</label>
-                <input type="number" name="Documento" placeholder="DNI" id="Documento">
-                <label for="Celular">Celular:</label>
-                <input type="tel" name="Celular" placeholder="Celular" id="Celular">
+                <input type="number" name="Documento" placeholder="DNI" id="Documento" required>
+                <label for="Celular">Telefono:</label>
+                <input type="number" name="Celular" placeholder="Celular" id="Celular" required>
                 <label for="Email">Email:</label>
-                <input type="email" name="Email" placeholder="Email" id="Email">
+                <input type="email" name="Email" placeholder="Email" id="Email" required>
                 <label for="Escenario">Escenario:</label>
-                <input type="text" name="Escenario" placeholder="Escenario" id="Escenario">
+                <input type="text" name="Escenario" placeholder="Escenario" id="Escenario" required>
                 <label for="Profesion">Profesión:</label>
-                <input type="text" name="Profesion" placeholder="Profesion" id="Profesion">
+                <input type="text" name="Profesion" placeholder="Profesion" id="Profesion" required>
             </div>
             
         
@@ -67,8 +67,10 @@
                     <input type="text" name="Integrante1_Nombres" id="Integrante1_Nombres" placeholder="Nombres" required>
                     <label for="Integrante1_Apellido">Apellido:</label>
                     <input type="text" name="Integrante1_Apellido" id="Integrante1_Apellido" placeholder="Apellido" required>
+                    <label for="Integrante1_Documento">Documento:</label>
+                    <input type="number" name="Integrante1_Documento" placeholder="DNI" id="Integrante1_Documento">
                     <label for="Integrante1_Celular">Teléfono:</label>
-                    <input type="tel" name="Integrante1_Celular" id="Integrante1_Celular" placeholder="Teléfono" required>
+                    <input type="number" name="Integrante1_Celular" id="Integrante1_Celular" placeholder="Teléfono" required>
                     <label for="Integrante1_Email">Email:</label>
                     <input type="email" name="Integrante1_Email" id="Integrante1_Email" placeholder="Email" required>
                     <label for="Integrante1_Profesion">Profesión:</label>
