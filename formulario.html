@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
+    <link rel="stylesheet" href="./CSS/form.css">
+    <title>Formulario - CSim - CODES</title>
+</head>
+<body>
+    <img src="./assets/img/Logo-Csim.png" alt="logo">
+    <h1>Registro CSim</h1>
+    <div class="container">
+        <form method="post" action="" name="registro">
+            <div class="refer">
+                <h3>REFERENTE</h3>
+                <label for="Fecha">Fecha solicitada:</label>
+                <input type="date" name="Fecha" id="Fecha" required>
+                <label for="Localidad">Localidad:</label>
+                <input type="text" name="Localidad" placeholder="Localidad" id="Localidad">
+                <label for="Institucion">Institución:</label>
+                <input type="text" name="Institucion" placeholder="Nombre de Institución" id="Institucion">
+                <label for="Zona">Zona Sanitaria:</label>
+                <select name="Zona Sanitaria" id="Zona" required>
+                    <option value="Zona-1">Zona 1</option>
+                    <option value="Zona-2">Zona 2</option>
+                    <option value="Zona-3">Zona 3</option>
+                    <option value="Zona-4">Zona 4</option>
+                    <option value="Zona-5">Zona 5</option>
+                </select>
+                <label for="Nombres">Nombres:</label>
+                <input type="text" name="Nombres" placeholder="Nombres" id="Nombres">
+                <label for="Apellido">Apellido:</label>
+                <input type="text" name="Apellido" placeholder="Apellido" id="Apellido">
+                <label for="Documento">Documento:</label>
+                <input type="number" name="Documento" placeholder="DNI" id="Documento">
+                <label for="Celular">Celular:</label>
+                <input type="tel" name="Celular" placeholder="Celular" id="Celular">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" placeholder="Email" id="Email">
+                <label for="Escenario">Escenario:</label>
+                <input type="text" name="Escenario" placeholder="Escenario" id="Escenario">
+                <label for="Profesion">Profesión:</label>
+                <input type="text" name="Profesion" placeholder="Profesion" id="Profesion">
+            </div>
+            
+        
+            <div id="integrantes">
+                <h3>INTEGRANTES</h3>
+                <div class="integrante">
+                    <label for="Integrante1_Nombres">Nombres:</label>
+                    <input type="text" name="Integrante1_Nombres" id="Integrante1_Nombres" placeholder="Nombres" required>
+                    <label for="Integrante1_Apellido">Apellido:</label>
+                    <input type="text" name="Integrante1_Apellido" id="Integrante1_Apellido" placeholder="Apellido" required>
+                    <label for="Integrante1_Celular">Teléfono:</label>
+                    <input type="tel" name="Integrante1_Celular" id="Integrante1_Celular" placeholder="Teléfono" required>
+                    <label for="Integrante1_Email">Email:</label>
+                    <input type="email" name="Integrante1_Email" id="Integrante1_Email" placeholder="Email" required>
+                    <label for="Integrante1_Profesion">Profesión:</label>
+                    <input type="text" name="Integrante1_Profesion" id="Integrante1_Profesion" placeholder="Profesión" required>
+                </div>
+            </div>
+            <button type="button" onclick="addIntegrante()">Añadir Integrante</button>
+            <br>
+            <p>Acepta al enviar el formulario los términos y requisitos para asistir al CeSim</p>
+            <div class="acepted">
+            <input type="checkbox" id="check" class="cheque" required>
+            <label id="acept" for="check">Acepto</label>
+            </div>
+            <input class="envio" type="submit" value="Enviar">
+        </form>
+    </div>
+    <script>
+        let integranteCount = 0;
+
+        function addIntegrante() {
+            integranteCount++;
+            const integrantesDiv = document.getElementById('integrantes');
+            const newIntegrante = document.createElement('div');
+            newIntegrante.className = 'integrante';
+            newIntegrante.innerHTML = `
+                <label for="Integrante${integranteCount}_Nombres">Nombres:</label>
+                <input type="text" name="Integrante${integranteCount}_Nombres" id="Integrante${integranteCount}_Nombres" required>
+                <label for="Integrante${integranteCount}_Apellido">Apellido:</label>
+                <input type="text" name="Integrante${integranteCount}_Apellido" id="Integrante${integranteCount}_Apellido" required>
+                <label for="Integrante${integranteCount}_Telefono">Teléfono:</label>
+                <input type="tel" name="Integrante${integranteCount}_Telefono" id="Integrante${integranteCount}_Telefono" required>
+                <label for="Integrante${integranteCount}_Email">Email:</label>
+                <input type="email" name="Integrante${integranteCount}_Email" id="Integrante${integranteCount}_Email" required>
+                <label for="Integrante${integranteCount}_Profesion">Profesión:</label>
+                <input type="text" name="Integrante${integranteCount}_Profesion" id="Integrante${integranteCount}_Profesion" required>
+                <button type="button" onclick="removeIntegrante(this)">Eliminar</button>
+            `;
+            integrantesDiv.appendChild(newIntegrante);
+        }
+
+        function removeIntegrante(button) {
+            button.parentNode.remove();
+            integranteCount--;
+        }
+    </script>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>

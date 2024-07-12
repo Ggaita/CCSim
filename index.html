@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,49 +19,28 @@
     <link rel="manifest" href="./assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
-    <link rel="stylesheet" href="./CSS/form.css">
-    <title>FORMULARIO - CSim - CODES</title>
+    <link rel="stylesheet" href="./CSS/binvenida.css">
+    <title>Bienvenido a CeSIM</title>
 </head>
 <body>
-    <h1>REGISTRO CSIM</h1>
-        <div class="container">
-            <form method="post" action="" name="registro">
-                <div class="refer">
-                    <h3>Referente</h3>
-                    <label for="Fecha">Fecha solicitada:</label>
-                    <input type="date" name="Fecha" placeholder="Fecha" id="Fecha" >
-                    <label for="Localidad">Localidad:</label>
-                    <input type="text" name="Localidad" placeholder="Localidad" id="Localidad">
-                    <label for="Institucion">Institución:</label>
-                    <input type="text" name="Institucion" placeholder="Nombre de Institución" id="Institucion">
-                    <label for="Zona">Zona Sanitaria:</label>
-                    <select name="Zona Sanitaria" id="Zona" required>
-                        <option value="Zona-1">Zona 1</option>
-                        <option value="Zona-2">Zona 2</option>
-                        <option value="Zona-3">Zona 3</option>
-                        <option value="Zona-4">Zona 4</option>
-                        <option value="Zona-5">Zona 5</option>
-                    </select>
-                    <label for="Nombres">Nombres:</label>
-                    <input type="text" name="Nombres" placeholder="Nombres:" id="Nombres">
-                    <label for="Apellido">Apellido:</label>
-                    <input type="text" name="Apellido" placeholder="Apellido:" id="Apellido">
-                    <label for="Documento">Documento: </label>
-                    <input type="number" name="Documento" placeholder="DNI:" id="Documento">
-                    <label for="Celular">Celular:</label>
-                    <input type="tel" name="Celular" placeholder="Celular" id="Celular">
-                    <label for="Email">Email:</label>
-                    <input type="email" name="Email" placeholder="Email" id="Email">
-                    <label for="Escenario">Escenario:</label>
-                    <input type="text" name="Escenario" placeholder="Escenario" id="Escenario">
-                    <h3>Leer!!</h3>
-                    <p>Al aceptar los términos se compromete a enviar mediante el formulario en la siguiente sección a completarlo con todos los datos de quienes ingresarán a los escenarios</p>
-                    <input type="checkbox" id="check" required>
-                    <label id="acept" for="check">Acepto</label>
-                    <input type="submit" value="Enviar">
-                </div>
-            </form>
-        </div>
-        <script src="./JS/dir.js"></script>
+    <div>
+    <img src="./assets/img/Logo-Csim.png" alt="Logo">
+    </div>
+    <div id="container" class="container">
+        <h2 id="texto-pregunta"></h2>
+        <form id="nameForm">
+            <label for="nombre">Ingresa tu nombre:</label>
+            <input type="text" id="nombre" required>
+            <button type="submit">Aceptar</button>
+        </form>
+    </div>
+
+    <div id="container-saludo">
+        <h2 id="texto-saludo"></h2>
+        <button id="aceptarBtn">Ir al formulario</button>
+    </div>
+
+    <script src="./JS/binvenido.js"></script>
 </body>
 </html>
+
