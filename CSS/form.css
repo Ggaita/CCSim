@@ -1,0 +1,76 @@
+:root {
+    --color-primary: rgb(216, 233, 219);
+    --color-secondary: rgb(165, 206, 132);
+    --color-fields: rgba(164, 194, 95, 0.692);
+    --color-fonts1: black;
+    --color-fonts2: black;
+}
+
+@font-face{
+    font-family: 'LibreFranklin-BoldItalic';
+    src: url(/assets/fonts/LibreFranklin-BoldItalic.ttf);
+}
+
+@font-face{
+    font-family: 'LibreFranklin-Italic-VariableFont_wght';
+    src: url(/assets/fonts/LibreFranklin-Italic-VariableFont_wght.ttf);
+}
+
+@font-face{
+    font-family: 'LibreFranklin-Medium';
+    src: url(/assets/fonts/LibreFranklin-Medium.ttf);
+}
+
+@font-face{
+    font-family: 'LibreFranklin-SemiBold';
+    src: url(/assets/fonts/LibreFranklin-SemiBold.ttf);
+}
+
+@font-face{
+    font-family: 'LibreFranklin-VariableFont_wght';
+    src: url(/assets/fonts/LibreFranklin-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.container {
+    background-color: var(--color-secondary);
+    padding: 15px;
+}
+
+.refer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-fields);
+    padding: 15px;
+}
+
+div .card-students {
+    background-color: var(--color-fields);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+
+h3 {
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#acept {
+    text-align: center;
+}
