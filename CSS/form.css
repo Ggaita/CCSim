@@ -155,3 +155,6 @@ button:hover {
     background-color: var(--color-primary);
 }
 
+footer{
+    color: var(--color-fonts2);
+}

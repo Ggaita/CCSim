@@ -125,3 +125,10 @@ button:hover {
     display: none;
     
 }
+
+footer p {
+    color: var(--color-fonts2);
+    position: absolute;
+    bottom: 3px;
+    right: 6px;
+}
