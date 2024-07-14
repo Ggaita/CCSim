@@ -88,6 +88,40 @@ form {
     margin-bottom: 5px;
 }
 
+.integrante.integrante-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation-name: fadeInUp;
+}
+
+.integrante.integrante-exit {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation-name: fadeOutDown;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
 label {
     font-size: 18px;
     margin: 4px;

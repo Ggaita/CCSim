@@ -29,6 +29,12 @@
         <form method="post" action="" name="registro">
             <div class="refer">
                 <h3>REFERENTE</h3>
+                <label for="Escenario">Escenario:</label>
+                <select name="Escenario" id="Escenario" required>
+                    <option value="Uno">UNO</option>
+                    <option value="Dos">DOS</option>
+                    <option value="Tres">TRES</option>
+                </select>
                 <label for="Fecha">Fecha solicitada:</label>
                 <input type="date" name="Fecha" id="Fecha" required>
                 <label for="Localidad">Localidad:</label>
@@ -53,8 +59,6 @@
                 <input type="number" name="Celular" placeholder="Celular" id="Celular" required>
                 <label for="Email">Email:</label>
                 <input type="email" name="Email" placeholder="Email" id="Email" required>
-                <label for="Escenario">Escenario:</label>
-                <input type="text" name="Escenario" placeholder="Escenario" id="Escenario" required>
                 <label for="Profesion">Profesión:</label>
                 <input type="text" name="Profesion" placeholder="Profesion" id="Profesion" required>
             </div>
@@ -88,32 +92,42 @@
         </form>
     </div>
     <script>
-        let integranteCount = 0;
+        let integranteCount = 1;
 
         function addIntegrante() {
             integranteCount++;
             const integrantesDiv = document.getElementById('integrantes');
             const newIntegrante = document.createElement('div');
-            newIntegrante.className = 'integrante';
+            newIntegrante.className = 'integrante integrante-enter';
             newIntegrante.innerHTML = `
                 <label for="Integrante${integranteCount}_Nombres">Nombres:</label>
-                <input type="text" name="Integrante${integranteCount}_Nombres" id="Integrante${integranteCount}_Nombres" required>
+                <input type="text" name="Integrante${integranteCount}_Nombres" id="Integrante${integranteCount}_Nombres" placeholder="Nombres" required>
                 <label for="Integrante${integranteCount}_Apellido">Apellido:</label>
-                <input type="text" name="Integrante${integranteCount}_Apellido" id="Integrante${integranteCount}_Apellido" required>
-                <label for="Integrante${integranteCount}_Telefono">Teléfono:</label>
-                <input type="tel" name="Integrante${integranteCount}_Telefono" id="Integrante${integranteCount}_Telefono" required>
+                <input type="text" name="Integrante${integranteCount}_Apellido" id="Integrante${integranteCount}_Apellido" placeholder="Apellido" required>
+                <label for="Integrante${integranteCount}_Documento">Documento:</label>
+                <input type="number" name="Integrante${integranteCount}_Documento" id="Integrante${integranteCount}_Documento" placeholder="DNI">
+                <label for="Integrante${integranteCount}_Celular">Teléfono:</label>
+                <input type="tel" name="Integrante${integranteCount}_Celular" id="Integrante${integranteCount}_Celular" placeholder="Teléfono" required>
                 <label for="Integrante${integranteCount}_Email">Email:</label>
-                <input type="email" name="Integrante${integranteCount}_Email" id="Integrante${integranteCount}_Email" required>
+                <input type="email" name="Integrante${integranteCount}_Email" id="Integrante${integranteCount}_Email" placeholder="Email" required>
                 <label for="Integrante${integranteCount}_Profesion">Profesión:</label>
-                <input type="text" name="Integrante${integranteCount}_Profesion" id="Integrante${integranteCount}_Profesion" required>
+                <input type="text" name="Integrante${integranteCount}_Profesion" id="Integrante${integranteCount}_Profesion" placeholder="Profesión" required>
                 <button type="button" onclick="removeIntegrante(this)">Eliminar</button>
             `;
             integrantesDiv.appendChild(newIntegrante);
+            // Permitir la animación CSS
+            setTimeout(() => {
+                newIntegrante.classList.remove('integrante-enter');
+            }, 10); // Ajustar el tiempo para asegurar que la transición CSS se aplique correctamente
         }
 
         function removeIntegrante(button) {
-            button.parentNode.remove();
-            integranteCount--;
+            const integrante = button.parentNode;
+            integrante.classList.add('integrante-exit');
+            setTimeout(() => {
+                integrante.parentNode.removeChild(integrante);
+                integranteCount--;
+            }, 300); // Ajustar el tiempo para que coincida con la duración de la transición CSS
         }
     </script>
 
