@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwS91DBKZ7SadrziC2W4vnijsXUrXqhre7Y4TeD53xUnrHw-Vbe0HslFYJr6E4sf9MC/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyDNWQVhFIp_uA29Meq-FNs18SSqoNTj07GWNpwvCXO2WwEMFNnMFMMfINMuHxFKzJB/exec';
 const form = document.forms['registro'];
 let integranteCount = 1;
 

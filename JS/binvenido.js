@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const saludo = [
-        `Hola {nombre}. Bienvenido/a a CeSim. El formulario se debe completar por única vez 
-        con un cupo de hasta 8 integrantes por escenario y fecha. Tenga los datos personales 
-        de todos los integrantes que asistirán. Muchas Gracias`,
+        `Hola {nombre}. Bienvenido/a a CeSim. El Registro se debe completar por única vez por fecha y escenario 
+        hasta 8 integrantes. Puedes consultar la fecha disponible. Tenga todos los datos personales 
+        de aquellos integrantes que asistirán. Muchas Gracias`,
         
     ];
 

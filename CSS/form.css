@@ -2,6 +2,7 @@
     --color-background: rgba(247, 247, 247, 0.856);
     --color-primary: rgb(216, 233, 219);
     --color-secondary: rgb(165, 206, 132);
+    --color-popups: rgba(69, 138, 80, 0.822);
     --color-fields: rgba(210, 229, 166, 0.438);
     --color-fonts1: black;
     --color-fonts2: rgb(77, 72, 72);
@@ -134,6 +135,9 @@ select {
     color: var(--color-fonts2);
 }
 
+
+
+
 option {
     color: var(--color-fonts2);
 }
@@ -191,4 +195,29 @@ button:hover {
 
 footer{
     color: var(--color-fonts2);
+}
+
+#iframesContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 527px;
+    height: 470px;
+    background-color: var(--color-popups);
+    text-align: center; /* Ajuste para centrar contenido horizontalmente */
+    box-shadow: -10px 9px 18px rgba(0, 0, 0, 0.281);
+    border-radius: 5px;
+    display: none;
+}
+
+#iframeUno, #iframeDos, #iframeTres {
+    width: 515px; /* Aplicar ancho de 400px a cada iframe */
+    height: 400px; /* Ajustar altura según sea necesario */
+   
+}
+
+#iframesContainer iframe {
+    margin: 5px; /* Espacio alrededor de los iframes */
+    border-radius: 5px;
 }
