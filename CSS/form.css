@@ -202,7 +202,7 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 520px;
+    width: 545px;
     height: 470px;
     background-color: var(--color-popups);
     text-align: center; /* Ajuste para centrar contenido horizontalmente */
@@ -212,15 +212,25 @@ footer{
 }
 
 #iframeUno, #iframeDos, #iframeTres {
-    max-width: 500px; /* Aplicar ancho de 400px a cada iframe */
+    width: 532px; /* Aplicar ancho de 400px a cada iframe */
     height: 400px; /* Ajustar altura según sea necesario */
-    align-content: center;
    
 }
 
 #iframesContainer iframe {
-    margin: 4px; /* Espacio alrededor de los iframes */
+    margin: 5px; /* Espacio alrededor de los iframes */
     border-radius: 5px;
-    align-content: center;
-    justify-content: center;
+}
+
+/*mobile*/
+
+@media(max-width: 700px) {
+
+    #iframesContainer {
+        width: 400px;
+    }
+
+    #iframeUno, #iframeDos, #iframeTres {
+        width: 385px; /* Aplicar ancho de 400px a cada iframe */
+    }
 }
