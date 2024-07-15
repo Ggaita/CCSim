@@ -202,7 +202,7 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 480px;
+    max-width: 520px;
     height: 470px;
     background-color: var(--color-popups);
     text-align: center; /* Ajuste para centrar contenido horizontalmente */
@@ -212,7 +212,7 @@ footer{
 }
 
 #iframeUno, #iframeDos, #iframeTres {
-    width: 470px; /* Aplicar ancho de 400px a cada iframe */
+    max-width: 500px; /* Aplicar ancho de 400px a cada iframe */
     height: 400px; /* Ajustar altura según sea necesario */
     align-content: center;
    
