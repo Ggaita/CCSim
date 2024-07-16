@@ -197,40 +197,5 @@ footer{
     color: var(--color-fonts2);
 }
 
-#iframesContainer {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 545px;
-    height: 470px;
-    background-color: var(--color-popups);
-    text-align: center; /* Ajuste para centrar contenido horizontalmente */
-    box-shadow: -10px 9px 18px rgba(0, 0, 0, 0.281);
-    border-radius: 5px;
-    display: none;
-}
 
-#iframeUno, #iframeDos, #iframeTres {
-    width: 532px; /* Aplicar ancho de 400px a cada iframe */
-    height: 400px; /* Ajustar altura según sea necesario */
-   
-}
 
-#iframesContainer iframe {
-    margin: 5px; /* Espacio alrededor de los iframes */
-    border-radius: 5px;
-}
-
-/*mobile*/
-
-@media(max-width: 700px) {
-
-    #iframesContainer {
-        width: 400px;
-    }
-
-    #iframeUno, #iframeDos, #iframeTres {
-        width: 385px; /* Aplicar ancho de 400px a cada iframe */
-    }
-}
